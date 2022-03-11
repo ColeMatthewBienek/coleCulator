@@ -1,0 +1,135 @@
+/*
+"CSS Reset"
+sets margin and padding of all elements to 0
+and ensures that the padding and border of an element 
+does not increase its width
+*/
+
+html {
+    font-size: 65%;
+    box-sizing: border-box;
+    
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    
+}
+
+body {
+    background: rgb(227,210,173);
+    background: radial-gradient(circle, rgba(227,210,173,1) 26%, rgba(247,247,247,1) 96%);
+}
+
+.header {
+    display: grid;
+    grid-template-columns: auto auto auto;;
+}
+
+.title-text {
+    font-size: 22px;
+    font-family: fantasy;
+    font-weight: bolder;
+    color: saddlebrown;
+    grid-column-start: 2 ;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background: transparent;
+}
+
+.title-text:hover{
+    color:white;
+}
+.calculator {
+    border: 2px solid #000;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*x,y ... */
+    width: 400px;
+   box-shadow: 5px;
+   padding: 4px;
+   background-color: grey;
+}
+
+.calculator:hover {
+    transition: all 200ms ease-in;
+    box-shadow: 0 0 8px 3px grey;
+    border: 2px solid black;
+}
+
+#calc-screen {
+    width: 100%;
+    font-size: 5rem;
+    height: 90px;
+    border: 5px solid black;
+    background-color: black;
+    color: #fff;
+    text-align: right;
+    padding-right: 20px;
+    padding-left: 10px;
+    
+}
+
+button {
+    height: 80px;
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #c4c4c4;
+    background-color: transparent;
+    font-size: 3rem;
+    color: #333;
+    background-image: linear-gradient(to bottom, transparent, transparent 50%), rgba(0,0,0, .08);
+}
+
+button:hover {
+    background-color: #eaeaea;
+}
+
+.function {
+    color: white;
+}
+
+.function:hover{
+    color:black;
+}
+
+.clear {
+    background-color: #f0595f;
+    border-color: #b0353a;
+    color: #fff;
+}
+
+.clear:hover {
+    background-color: #125;
+}
+
+.equal-sign {
+    background-color: #f0595f;
+    border-color: #b0353a;
+    color: #fff;
+    height: 100%;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    grid-column: 4;
+}
+
+.equal-sign:hover {
+    background-color: #125;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px 15px;
+    padding: 15px;
+}
+
+
+
+
+
